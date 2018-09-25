@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Open Sans';
+    font-size: 10px;
+}
+
+body {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(270deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.background{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    width: 350px;
+    height: 550px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.header__title {
+    font-size: 1.5rem;
+}
+
+.addTask {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputTask {
+    width: 100%;
+    padding: 40px;
+    font-size: 1.5rem;
+    border: 0px;
+    color: #7a6b77;
+}
+
+.addButton {
+    width: 100%;
+    background-color: #ba7af8;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 15px;
+    border-style: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.toDoList {
+   overflow: auto;
+   height: 280px;
+   max-height: 280px;
+}
+
+.toDoList__task {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+}
+
+.taskName {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2e2e2e;
+}
+
+.taskNameChecked {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #bababa;
+    text-decoration: line-through;
+}
+
+.taskButton {
+    margin: 0;
+    border-style: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer__button {
+    border-style: none;
+    padding: 8px;
+    font-size: 1.2rem;
+    background-color: inherit;
+    color: #7a6b77;
+    margin: 0;
+}
