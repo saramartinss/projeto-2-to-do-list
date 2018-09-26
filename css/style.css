@@ -73,6 +73,12 @@ body {
     padding: 12px 10px;
     align-items: center;
     border-bottom: 1px solid #ececec;
+    font-weight: bold;
+}
+
+.toDoList__task.over {
+    //border: 2px dashed #000;
+    border-top: 2px solid blue;
 }
 
 .taskName {
