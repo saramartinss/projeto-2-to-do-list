@@ -3,19 +3,21 @@ const input = document.querySelector(".inputTask")
 const list = document.querySelector(".toDoList")
 const checkButton = document.querySelector(".checkAllTasks")
 const deleteButton = document.querySelector(".deleteAllTasks")
+const hidden = document.querySelector(".hiddenFooter")
 
 addButton.addEventListener("click", function(e){
     e.preventDefault()
     
-    if (input.value === undefined || input.value === null || input.value === "" || input.value === " "){
+    hidden.style.display = 'flex'
+    deleteButton.innerHTML = "Excluir tudo"
+
+    const regex = /\w+/ig;
+    if(!regex.test(input.value)){
         input.focus()
         return false
     }
 
-    let frase = input.value
-    let verificar = /^[$A-Z_][0-9A-Z_$]*$/i;
-    var res = verificar.test(frase);
-    if(res === false){
+    if (input.value === undefined || input.value === null || input.value === "" || input.value === " "){
         input.focus()
         return false
     }
@@ -53,6 +55,12 @@ addButton.addEventListener("click", function(e){
         }
     })
 
+    newTask.addEventListener("onmousedown", function(event){
+        newTask.style.position = 'absolute'
+        newTask.style.zIndex = 1000
+
+    })
+
     checkButton.addEventListener("click", function(e){
         e.preventDefault()
         while (task.classList.contains("taskName")){
@@ -61,9 +69,15 @@ addButton.addEventListener("click", function(e){
         }      
     })
 
+    
     deleteButton.addEventListener("click", function(e){
         e.preventDefault()
-        newTask.remove()
+        hidden.style.display = 'flex'
+        deleteButton.innerHTML = "Confirmar exclusão"
+        deleteButton.addEventListener("click", function(){
+            newTask.remove()
+            hidden.style.display = 'none'
+        })      
     })
     
     input.value = ""

@@ -22,6 +22,7 @@ body {
     width: 350px;
     height: 550px;
     position: relative;
+    border-radius: 5px;
 }
 
 .header {
@@ -78,6 +79,7 @@ body {
     margin: 0;
     font-size: 1.5rem;
     color: #2e2e2e;
+    word-break: break-word;
 }
 
 .taskNameChecked {
@@ -101,6 +103,10 @@ body {
     justify-content: space-between;
     position: absolute;
     bottom: 0;
+}
+
+.hiddenFooter {
+    display: none;
 }
 
 .footer__button {
