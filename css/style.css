@@ -41,9 +41,13 @@ body {
     flex-direction: column;
 }
 
+.addTask label {
+    margin: 0;
+}
+
 .inputTask {
     width: 100%;
-    padding: 40px 86px;
+    padding: 40px;
     font-size: 1.5rem;
     border: 0px;
     color: #7a6b77;
@@ -71,7 +75,7 @@ body {
 .toDoList__task {
     display: flex;
     justify-content: space-between;
-    padding: 12px 10px;
+    padding: 12px 15px;
     align-items: center;
     border-bottom: 1px solid #ececec;
     font-weight: bold;
@@ -98,10 +102,11 @@ body {
 
 .taskButton {
     margin: 0;
+    padding: 0;
     border-style: none;
     background-color: transparent;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 .footer {

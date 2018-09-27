@@ -62,8 +62,9 @@ addButton.addEventListener("click", function(e){
         while (task.classList.contains("taskName")){
             task.classList.remove("taskName")
             task.classList.add("taskNameChecked")
-        }   
+        }
     })
+
 
     deleteButton.addEventListener("click", function(e){
         e.preventDefault()
