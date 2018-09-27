@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Projeto 2 - To do Lista</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
@@ -14,7 +14,9 @@
                 <h1 class="header__title">Adicione uma nova tarefa</h1>
             </header>
             <div class="addTask">
-                <input class="addTask__inputTask inputTask" type="text" placeholder="Digite a nova tarefa aqui">
+                <label for="inputTask">
+                    <input class="addTask__inputTask inputTask" title="Input Task" id="inputTask" type="text" placeholder="Digite a nova tarefa aqui">
+                </label>
                 <button type="button" class="addTask__button addButton">Add</button>
             </div>
             <ul class="toDoList">
