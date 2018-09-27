@@ -65,6 +65,7 @@ body {
    overflow: auto;
    height: 280px;
    max-height: 280px;
+   padding: 0;
 }
 
 .toDoList__task {

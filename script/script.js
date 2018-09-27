@@ -8,7 +8,6 @@ const hidden = document.querySelector(".hiddenFooter")
 addButton.addEventListener("click", function(e){
     e.preventDefault()
     
-    hidden.style.display = 'flex'
     deleteButton.innerHTML = "Excluir tudo"
 
     const regex = /\w+/ig;
@@ -22,9 +21,11 @@ addButton.addEventListener("click", function(e){
         return false
     }
 
-    const newTask = document.createElement("div")
+    const newTask = document.createElement("li")
     const task = document.createElement("h2")
     const remove = document.createElement("button")
+
+    hidden.style.display = 'flex'
 
     newTask.className = "toDoList__task"
     task.className = "taskName"
