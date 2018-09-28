@@ -23,6 +23,7 @@ body {
     height: 550px;
     position: relative;
     border-radius: 5px;
+    box-shadow: 1px 1px 5px #ba7af8;
 }
 
 .header {

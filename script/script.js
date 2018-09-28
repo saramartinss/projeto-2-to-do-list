@@ -58,7 +58,6 @@ addButton.addEventListener("click", function(e){
         }
     })
 
-
     deleteButton.addEventListener("click", function(e){
         e.preventDefault()
      
@@ -66,5 +65,6 @@ addButton.addEventListener("click", function(e){
         hidden.style.display = 'none'
     })
     
+    input.focus()
     input.value = ""
 })
