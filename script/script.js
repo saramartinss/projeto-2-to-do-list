@@ -8,15 +8,8 @@ const hidden = document.querySelector(".hiddenFooter")
 addButton.addEventListener("click", function(e){
     e.preventDefault()
     
-    deleteButton.innerHTML = "Excluir tudo"
-
     const regex = /\w+/ig;
     if(!regex.test(input.value)){
-        input.focus()
-        return false
-    }
-
-    if (input.value === undefined || input.value === null || input.value === "" || input.value === " "){
         input.focus()
         return false
     }
@@ -31,7 +24,6 @@ addButton.addEventListener("click", function(e){
     task.className = "taskName"
     remove.className = "taskButton"
 
-    newTask.draggable = true
     task.innerHTML = input.value
     remove.innerHTML = "x"
 
@@ -42,6 +34,10 @@ addButton.addEventListener("click", function(e){
     remove.addEventListener("click", function(e){
         e.preventDefault()
         newTask.remove()
+
+        if(list.children.length === 0){
+            hidden.style.display = 'none'
+        }
     })
 
     task.addEventListener("click", function(e){

@@ -82,6 +82,10 @@ body {
     font-weight: bold;
 }
 
+.toDoList__task:hover {
+    border: 2px solid #ececec;
+}
+
 .toDoList__task.over {
     //border: 2px dashed #000;
     border-top: 2px solid blue;
